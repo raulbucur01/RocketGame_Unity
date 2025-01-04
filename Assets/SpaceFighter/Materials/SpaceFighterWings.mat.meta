@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4aeb4f9daf524ac4ead73a080ff83792
+timeCreated: 1500132895
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87056
+  packageName: SpaceFighter
+  packageVersion: 1.1
+  assetPath: Assets/SpaceFighter/Materials/SpaceFighterWings.mat
+  uploadId: 191552
