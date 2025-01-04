@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9dc74f0ca5de04c43a429ede8bd29a42
+timeCreated: 1500132895
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87056
+  packageName: SpaceFighter
+  packageVersion: 1.1
+  assetPath: Assets/SpaceFighter/Materials/rocket_launcher.mat
+  uploadId: 191552

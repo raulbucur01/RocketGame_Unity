@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e279c30a1e087ea4d86c41786b508b87
+timeCreated: 1500132894
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 87056
+  packageName: SpaceFighter
+  packageVersion: 1.1
+  assetPath: Assets/SpaceFighter/Materials/Helium3.mat
+  uploadId: 191552
