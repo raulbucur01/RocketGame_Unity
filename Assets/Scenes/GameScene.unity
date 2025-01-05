@@ -145,43 +145,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.96456134
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.367646
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.551556
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.015067424
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.011703254
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.98590994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.16618556
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 19.107
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -182.038
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -1.703
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -358,8 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 50
   boostedSpeed: 70
-  rotationSpeed: 200
-  strafeSpeed: 5
+  baseRotationSpeed: 100
 --- !u!54 &1192439024
 Rigidbody:
   m_ObjectHideFlags: 0

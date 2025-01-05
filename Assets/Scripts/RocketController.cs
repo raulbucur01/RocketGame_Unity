@@ -3,8 +3,8 @@ using UnityEngine;
 public class RocketController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float forwardSpeed = 0f;       // Normal forward speed
-    public float boostedSpeed = 20f;      // Speed when Space is pressed
+    public float forwardSpeed = 50f;       // Normal forward speed
+    public float boostedSpeed = 70f;      // Speed when Space is pressed
     public float baseRotationSpeed = 100f; // Base rotation speed
 
     private Rigidbody rb;
