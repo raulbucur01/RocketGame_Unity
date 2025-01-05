@@ -7,7 +7,7 @@ public class Rocket : MonoBehaviour
     void Start()
     {
         // Destroy the rocket after a set lifetime
-        //Destroy(gameObject, lifetime);
+        Destroy(gameObject, lifetime);
     }
 
     void OnCollisionEnter(Collision collision)

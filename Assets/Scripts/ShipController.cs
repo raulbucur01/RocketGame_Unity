@@ -15,6 +15,12 @@ public class RocketController : MonoBehaviour
     public float rocketSpeed = 10f;      // Speed of the rocket
     public float fireRate = 0.5f;
 
+    [Header("Particle Effects")]
+    public ParticleSystem effect1;   // Particle effect 1 (e.g., engine 1)
+    public ParticleSystem effect2;   // Particle effect 2 (e.g., engine 2)
+    public ParticleSystem effect3;   // Particle effect 3 (e.g., engine 3)
+    public ParticleSystem effect4;
+
     private Rigidbody rb;
     private float currentSpeed;
     private float lastFireTime;
@@ -37,8 +43,25 @@ public class RocketController : MonoBehaviour
         // Adjust speed based on Space key
         currentSpeed = Input.GetKey(KeyCode.Space) ? boostedSpeed : forwardSpeed;
 
+        // Adjust particle emission rate based on boost
+        float newRate = Input.GetKey(KeyCode.Space) ? 300f : 20f; // Adjust these values as needed
+        SetParticleEmissionRate(newRate);
+
         // Move forward along the Z-axis at the current speed
         rb.linearVelocity = -(transform.forward * currentSpeed);
+    }
+
+    private void SetParticleEmissionRate(float newRate)
+    {
+        var effect1Emission = effect1.emission;
+        var effect2Emission = effect2.emission;
+        var effect3Emission = effect3.emission;
+        var effect4Emission = effect4.emission;
+
+        effect1Emission.rateOverTime = newRate;
+        effect2Emission.rateOverTime = newRate;
+        effect3Emission.rateOverTime = newRate;
+        effect4Emission.rateOverTime = newRate;
     }
 
     private void HandleRotation()
