@@ -189,6 +189,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       insertIndex: -1
       addedObject: {fileID: 433770906}
+    - targetCorrespondingSourceObject: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1766583598}
+    - targetCorrespondingSourceObject: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1846535956}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       insertIndex: -1
@@ -359,6 +365,11 @@ MonoBehaviour:
   forwardSpeed: 50
   boostedSpeed: 70
   baseRotationSpeed: 100
+  rocketPrefab: {fileID: 1487715057974527877, guid: 95bbd3191f2aec34f8ec8cc9677db5af, type: 3}
+  rocketLauncher1: {fileID: 1766583598}
+  rocketLauncher2: {fileID: 1846535956}
+  rocketSpeed: 50
+  fireRate: 1
 --- !u!54 &1192439024
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -576,6 +587,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 347040970b496ba4086308c48e34652b, type: 3}
+--- !u!1 &1766583597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1766583598}
+  m_Layer: 0
+  m_Name: RocketLauncher1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1766583598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766583597}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -2.291323, y: 0.065, z: 6.246132}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 376245840}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+--- !u!1 &1846535955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1846535956}
+  m_Layer: 0
+  m_Name: RocketLauncher2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1846535956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846535955}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 2.326, y: 0.029, z: 6.246132}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 376245840}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
