@@ -1,3 +1,4 @@
+using System;
 using System.Net.Sockets;
 using UnityEngine;
 
@@ -24,6 +25,8 @@ public class RocketController : MonoBehaviour
     [Header("Camera Settings")]
     [SerializeField] private Camera _camera;
     [SerializeField] private float _cameraFollowSpeed;
+    
+    [SerializeField] private GameObject _explosionPrefab;
 
     private Rigidbody rb;
     private float currentSpeed;
@@ -67,9 +70,7 @@ public class RocketController : MonoBehaviour
 
         _camera.transform.rotation = Quaternion.LookRotation(lookAtTarget - _camera.transform.position, upDirection);
     }
-
-
-
+    
 
     private void HandleMovement()
     {
@@ -169,4 +170,15 @@ public class RocketController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject)
+        {
+            // Instantiate explosion effect
+            Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+            
+            // Destroy the ship
+            Destroy(gameObject);
+        }
+    }
 }
