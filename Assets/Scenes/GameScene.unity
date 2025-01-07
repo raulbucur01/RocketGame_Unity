@@ -5605,7 +5605,7 @@ MonoBehaviour:
   - {fileID: 495403447699483738, guid: 3c06fa866f2be434b97239ee1ab69d3b, type: 3}
   - {fileID: 2692594753747960197, guid: 9843f84f57901b24989015eec2c123ac, type: 3}
   numberOfAsteroids: 100
-  spawnAreaSize: {x: 5000, y: 5000, z: 5000}
+  spawnAreaSize: {x: 500, y: 500, z: 500}
   spawnAreaCenter: {x: 0, y: 0, z: 0}
   asteroidScaleRange: {x: 10, y: 50}
 --- !u!4 &1438457252
