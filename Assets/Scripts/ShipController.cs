@@ -4,27 +4,31 @@ using UnityEngine;
 public class RocketController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float forwardSpeed = 50f;       // Normal forward speed
-    public float boostedSpeed = 70f;      // Speed when Space is pressed
-    public float baseRotationSpeed = 100f; // Base rotation speed
+    [SerializeField] private float forwardSpeed = 50f;       // Normal forward speed
+    [SerializeField] private float boostedSpeed = 70f;      // Speed when Space is pressed
+    [SerializeField] private float baseRotationSpeed = 100f; // Base rotation speed
 
     [Header("Shooting Settings")]
-    public GameObject rocketPrefab;      // Rocket prefab
-    public Transform rocketLauncher1;          // Fire point for shooting rockets
-    public Transform rocketLauncher2;          // Fire point for shooting rockets
-    public float rocketSpeed = 10f;      // Speed of the rocket
-    public float fireRate = 0.5f;
+    [SerializeField] private GameObject rocketPrefab;      // Rocket prefab
+    [SerializeField] private Transform rocketLauncher1;          // Fire point for shooting rockets
+    [SerializeField] private Transform rocketLauncher2;          // Fire point for shooting rockets
+    [SerializeField] private float rocketSpeed = 10f;      // Speed of the rocket
+    [SerializeField] private float fireRate = 0.5f;
 
     [Header("Particle Effects")]
-    public ParticleSystem effect1;   // Particle effect 1 (e.g., engine 1)
-    public ParticleSystem effect2;   // Particle effect 2 (e.g., engine 2)
-    public ParticleSystem effect3;   // Particle effect 3 (e.g., engine 3)
-    public ParticleSystem effect4;
+    [SerializeField] private ParticleSystem effect1;   // Particle effect 1 (e.g., engine 1)
+    [SerializeField] private ParticleSystem effect2;   // Particle effect 2 (e.g., engine 2)
+    [SerializeField] private ParticleSystem effect3;   // Particle effect 3 (e.g., engine 3)
+    [SerializeField] private ParticleSystem effect4;
+    
+    [Header("Camera Settings")]
+    [SerializeField] private Camera _camera;
+    [SerializeField] private float _cameraFollowSpeed;
 
     private Rigidbody rb;
     private float currentSpeed;
     private float lastFireTime;
-
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,7 +40,32 @@ public class RocketController : MonoBehaviour
         HandleMovement();
         HandleRotation();
         HandleShooting();
+        UpdateCamera();
     }
+
+    private void UpdateCamera()
+    {
+        // Define offset relative to the ship's local space (back and up)
+        Vector3 offset = transform.up * 40f + transform.forward * 20f;
+
+        // Calculate the target position in world space
+        Vector3 targetPosition = transform.position + offset;
+
+        // Smoothly move the camera towards the target position
+        _camera.transform.position = Vector3.Lerp(_camera.transform.position, targetPosition, 
+            _cameraFollowSpeed * Time.deltaTime);
+
+        // Calculăm direcția către care să privească camera
+        Vector3 lookDirection = (transform.position + transform.forward * 2f) - _camera.transform.position;
+
+// Calculăm rotația țintă pe baza direcției
+        Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+
+// Interpolăm între rotația actuală și rotația țintă
+        _camera.transform.rotation = Quaternion.Lerp(_camera.transform.rotation, targetRotation, _cameraFollowSpeed * Time.deltaTime);
+
+    }
+
 
     private void HandleMovement()
     {
