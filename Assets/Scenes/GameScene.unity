@@ -5360,11 +5360,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3360166068394803097, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 929
+      value: -527
       objectReference: {fileID: 0}
     - target: {fileID: 3360166068394803097, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1102
+      value: -137
       objectReference: {fileID: 0}
     - target: {fileID: 3360166068394803097, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5627,9 +5627,9 @@ MonoBehaviour:
   - {fileID: 712763581221244047, guid: 196362b23cf6c7f42b498b46e62d7f4a, type: 3}
   - {fileID: 495403447699483738, guid: 3c06fa866f2be434b97239ee1ab69d3b, type: 3}
   - {fileID: 2692594753747960197, guid: 9843f84f57901b24989015eec2c123ac, type: 3}
-  numberOfAsteroids: 100
-  spawnAreaSize: {x: 500, y: 500, z: 500}
-  spawnAreaCenter: {x: 0, y: 0, z: 0}
+  numberOfAsteroids: 300
+  spawnAreaSize: {x: 1043.4, y: 1008.1, z: 1707}
+  spawnAreaCenter: {x: -276.34, y: 0, z: 0}
   asteroidScaleRange: {x: 10, y: 50}
 --- !u!4 &1438457252
 Transform:
@@ -5672,7 +5672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4874934499113314, guid: 347040970b496ba4086308c48e34652b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.6
+      value: 538
       objectReference: {fileID: 0}
     - target: {fileID: 4874934499113314, guid: 347040970b496ba4086308c48e34652b, type: 3}
       propertyPath: m_LocalPosition.y

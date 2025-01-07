@@ -13,13 +13,9 @@ public class GenerateAsteroids : MonoBehaviour
     [Header("Scale Settings")]
     public Vector2 asteroidScaleRange = new Vector2(1f, 10f); // Interval pentru scalarea asteroizilor (minim, maxim)
 
-    void Update()
+    void Start()
     {
-        // Detectăm apăsarea tastei 'K' și generăm asteroizii
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            GenerateAsteroidsInScene();
-        }
+        GenerateAsteroidsInScene();
     }
 
     void GenerateAsteroidsInScene()
