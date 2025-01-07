@@ -12,7 +12,7 @@ public class GenerateAsteroids : MonoBehaviour
     public float spawnRadius = 50f; // Raza în jurul navei pentru spawn
 
     [Header("Scale Settings")]
-    public Vector2 asteroidScaleRange = new Vector2(1f, 10f); // Interval pentru scalarea asteroizilor (minim, maxim)
+    public Vector2 asteroidScaleRange = new Vector2(1f, 5f); // Interval pentru scalarea asteroizilor (minim, maxim)
 
     private List<GameObject> activeAsteroids = new List<GameObject>(); // Lista de asteroizi activi
 
