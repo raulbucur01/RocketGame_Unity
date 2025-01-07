@@ -1,73 +1,28 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
 public class GenerateAsteroids : MonoBehaviour
 {
     [Header("Prefab Settings")]
     public GameObject[] asteroidPrefabs; // Lista cu prefabs de asteroizi
-    public int maxAsteroids = 100; // Numărul maxim de asteroizi simultan
+    public int numberOfAsteroids = 1000; // Numărul total de asteroizi
 
     [Header("Spawn Area Settings")]
-    public Transform ship; // Referință la nava centrală
-    public float spawnRadius = 50f; // Raza în jurul navei pentru spawn
+    public Vector3 spawnAreaSize = new Vector3(50, 50, 50); // Dimensiunea zonei de spawn
+    public Vector3 spawnAreaCenter = Vector3.zero; // Centrul zonei de spawn
 
     [Header("Scale Settings")]
     public Vector2 asteroidScaleRange = new Vector2(1f, 10f); // Interval pentru scalarea asteroizilor (minim, maxim)
 
-    private List<GameObject> activeAsteroids = new List<GameObject>(); // Lista de asteroizi activi
-
     void Update()
     {
-        // Detectăm apăsarea tastei 'K' pentru a genera asteroizi
+        // Detectăm apăsarea tastei 'K' și generăm asteroizii
         if (Input.GetKeyDown(KeyCode.K))
         {
-            GenerateInitialAsteroids();
-        }
-
-        // Actualizăm pozițiile asteroizilor
-        UpdateAsteroids();
-    }
-
-    void GenerateInitialAsteroids()
-    {
-        // Distrugem asteroizii existenți
-        foreach (GameObject asteroid in activeAsteroids)
-        {
-            Destroy(asteroid);
-        }
-        activeAsteroids.Clear();
-
-        // Generăm noi asteroizi
-        for (int i = 0; i < maxAsteroids; i++)
-        {
-            SpawnAsteroidAtRandomPosition();
-        }
-
-        Debug.Log($"{maxAsteroids} asteroids have been generated around the ship!");
-    }
-
-    void UpdateAsteroids()
-    {
-        for (int i = activeAsteroids.Count - 1; i >= 0; i--)
-        {
-            GameObject asteroid = activeAsteroids[i];
-
-            // Verificăm dacă asteroidul a ieșit din raza specificată
-            if (Vector3.Distance(asteroid.transform.position, ship.position) > spawnRadius)
-            {
-                // Calculăm poziția de respawn pe partea opusă
-                Vector3 oppositePosition = CalculateOppositeSpawnPosition(asteroid.transform.position);
-
-                // Distrugem asteroidul și respawnăm unul nou
-                Destroy(asteroid);
-                activeAsteroids.RemoveAt(i);
-
-                SpawnAsteroidAtPosition(oppositePosition);
-            }
+            GenerateAsteroidsInScene();
         }
     }
 
-    void SpawnAsteroidAtRandomPosition()
+    void GenerateAsteroidsInScene()
     {
         if (asteroidPrefabs.Length == 0)
         {
@@ -75,48 +30,33 @@ public class GenerateAsteroids : MonoBehaviour
             return;
         }
 
-        // Selectează un prefab aleatoriu din listă
-        GameObject randomPrefab = asteroidPrefabs[Random.Range(0, asteroidPrefabs.Length)];
+        for (int i = 0; i < numberOfAsteroids; i++)
+        {
+            // Selectează un prefab aleatoriu din listă
+            GameObject randomPrefab = asteroidPrefabs[Random.Range(0, asteroidPrefabs.Length)];
 
-        // Calculăm o poziție aleatorie pe marginea razei
-        Vector3 randomDirection = Random.onUnitSphere; // Direcție aleatorie
-        Vector3 spawnPosition = ship.position + randomDirection * spawnRadius;
+            // Calculăm o poziție aleatorie în zona de spawn
+            Vector3 randomPosition = new Vector3(
+                Random.Range(spawnAreaCenter.x - spawnAreaSize.x / 2, spawnAreaCenter.x + spawnAreaSize.x / 2),
+                Random.Range(spawnAreaCenter.y - spawnAreaSize.y / 2, spawnAreaCenter.y + spawnAreaSize.y / 2),
+                Random.Range(spawnAreaCenter.z - spawnAreaSize.z / 2, spawnAreaCenter.z + spawnAreaSize.z / 2)
+            );
 
-        // Instantiem prefab-ul selectat aleatoriu
-        SpawnAsteroidAtPosition(spawnPosition);
-    }
+            // Instantiem prefab-ul selectat aleatoriu
+            GameObject asteroid = Instantiate(randomPrefab, randomPosition, Random.rotation);
 
-    void SpawnAsteroidAtPosition(Vector3 position)
-    {
-        GameObject randomPrefab = asteroidPrefabs[Random.Range(0, asteroidPrefabs.Length)];
+            // Aplicăm o scalare aleatorie
+            float randomScale = Random.Range(asteroidScaleRange.x, asteroidScaleRange.y);
+            asteroid.transform.localScale = Vector3.one * randomScale;
+        }
 
-        // Instantiem prefab-ul selectat aleatoriu
-        GameObject asteroid = Instantiate(randomPrefab, position, Random.rotation);
-
-        // Aplicăm o scalare aleatorie
-        float randomScale = Random.Range(asteroidScaleRange.x, asteroidScaleRange.y);
-        asteroid.transform.localScale = Vector3.one * randomScale;
-
-        // Adăugăm asteroidul în lista de asteroizi activi
-        activeAsteroids.Add(asteroid);
-    }
-
-    Vector3 CalculateOppositeSpawnPosition(Vector3 position)
-    {
-        // Direcția asteroidului față de navă
-        Vector3 direction = (position - ship.position).normalized;
-
-        // Poziția pe partea opusă, la marginea razei
-        return ship.position - direction * spawnRadius;
+        Debug.Log($"{numberOfAsteroids} asteroids have been generated in the scene!");
     }
 
     // Vizualizarea zonei de spawn în editor
     private void OnDrawGizmos()
     {
-        if (ship != null)
-        {
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawWireSphere(ship.position, spawnRadius);
-        }
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(spawnAreaCenter, spawnAreaSize);
     }
 }
