@@ -661,6 +661,7 @@ GameObject:
   - component: {fileID: 136432924633376916}
   - component: {fileID: 114004282435013638}
   - component: {fileID: 6045974446699140215}
+  - component: {fileID: 5280541794018423971}
   m_Layer: 0
   m_Name: Sheep
   m_TagString: Sheep
@@ -773,6 +774,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5280541794018423971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692594753747960197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24db5ab55952add44aee5a1bcf66658d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rotationPoint: {x: 0, y: 0, z: 0}
+  rotationSpeed: 50
+  orbitRadius: 2
+  zigZagAmplitude: 2
+  zigZagFrequency: 2
 --- !u!1 &2692594753769500436
 GameObject:
   m_ObjectHideFlags: 0

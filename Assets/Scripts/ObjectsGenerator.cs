@@ -11,7 +11,7 @@ public class GenerateAsteroids : MonoBehaviour
     public Vector3 spawnAreaCenter = Vector3.zero; // Centrul zonei de spawn
 
     [Header("Scale Settings")]
-    public Vector2 asteroidScaleRange = new Vector2(1f, 10f); // Interval pentru scalarea asteroizilor (minim, maxim)
+    public Vector2 asteroidScaleRange = new Vector2(1f, 5f); // Interval pentru scalarea asteroizilor (minim, maxim)
 
     void Start()
     {
