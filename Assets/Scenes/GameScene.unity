@@ -5289,7 +5289,7 @@ MonoBehaviour:
   effect3: {fileID: 1608011382}
   effect4: {fileID: 245640709}
   _camera: {fileID: 433770909}
-  _cameraFollowSpeed: 1
+  _cameraFollowSpeed: 2
 --- !u!54 &1192439024
 Rigidbody:
   m_ObjectHideFlags: 0

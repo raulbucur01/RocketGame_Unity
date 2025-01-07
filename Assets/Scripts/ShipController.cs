@@ -43,6 +43,8 @@ public class RocketController : MonoBehaviour
         UpdateCamera();
     }
 
+    private Vector3 _currentVelocity; // Variabilă pentru viteza de tranziție a camerei
+
     private void UpdateCamera()
     {
         // Define offset relative to the ship's local space (back and up)
@@ -51,20 +53,22 @@ public class RocketController : MonoBehaviour
         // Calculate the target position in world space
         Vector3 targetPosition = transform.position + offset;
 
-        // Smoothly move the camera towards the target position
-        _camera.transform.position = Vector3.Lerp(_camera.transform.position, targetPosition, 
-            _cameraFollowSpeed * Time.deltaTime);
+        // Smoothly move the camera towards the target position using SmoothDamp
+        _camera.transform.position = Vector3.SmoothDamp(
+            _camera.transform.position, 
+            targetPosition, 
+            ref _currentVelocity, 
+            _cameraFollowSpeed // Ajustează timpul dorit pentru tranziție
+        );
 
-        // Calculăm direcția către care să privească camera
-        Vector3 lookDirection = (transform.position + transform.forward * 2f) - _camera.transform.position;
+        // Ensure the camera always looks at the ship with the correct up direction
+        Vector3 lookAtTarget = transform.position + transform.forward * 2f;
+        Vector3 upDirection = transform.up;
 
-// Calculăm rotația țintă pe baza direcției
-        Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
-
-// Interpolăm între rotația actuală și rotația țintă
-        _camera.transform.rotation = Quaternion.Lerp(_camera.transform.rotation, targetRotation, _cameraFollowSpeed * Time.deltaTime);
-
+        _camera.transform.rotation = Quaternion.LookRotation(lookAtTarget - _camera.transform.position, upDirection);
     }
+
+
 
 
     private void HandleMovement()
