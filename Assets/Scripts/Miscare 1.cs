@@ -35,7 +35,7 @@ public class AsteroidMovement : MonoBehaviour
     void Update()
     {
         // Aplică mișcarea în funcție de tipul selectat
-        /*switch (currentMovement)
+        switch (currentMovement)
         {
             case MovementType.Linear:
                 MoveLinear();
@@ -46,7 +46,7 @@ public class AsteroidMovement : MonoBehaviour
             case MovementType.ZigZag:
                 MoveZigZag();
                 break;
-        }*/
+        }
     }
 
     private void MoveLinear()

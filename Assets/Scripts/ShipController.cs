@@ -105,16 +105,16 @@ public class RocketController : MonoBehaviour
         float YAxisRotation = 0f;
 
         // Adjust rotation based on WASD keys
-        if (Input.GetKey(KeyCode.W)) XAxisRotation = 1f;   // Rotate up
-        if (Input.GetKey(KeyCode.S)) XAxisRotation = -1f;  // Rotate down
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) XAxisRotation = 1f;   // Rotate up
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) XAxisRotation = -1f;  // Rotate down
         if (Input.GetKey(KeyCode.Q)) ZAxisRotation = -1f; // Roll left
         if (Input.GetKey(KeyCode.E)) ZAxisRotation = 1f; // Roll right
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A)  || Input.GetKey(KeyCode.LeftArrow))
         {
             YAxisRotation = -1f;
             ZAxisRotation = -0.2f; // Slight roll to the left
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             YAxisRotation = 1f;
             ZAxisRotation = 0.2f; // Slight roll to the right
