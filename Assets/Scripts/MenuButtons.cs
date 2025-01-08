@@ -8,6 +8,12 @@ public class MenuButtons : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
     
+    public void PlayArcade()
+    {
+        // Load the next scene in the build settings.
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+    }
+    
     public void QuitGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
