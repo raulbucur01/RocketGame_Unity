@@ -52,6 +52,8 @@ public class RocketController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         currentSpeed = forwardSpeed; // Start with normal forward speed
+        _quitButton.SetActive(false);
+        _gameOverButton.SetActive(false);
     }
 
     void Update()
