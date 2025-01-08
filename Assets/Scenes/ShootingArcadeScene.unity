@@ -15172,7 +15172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a137601d8f7e644831aa34a1d10ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnablePrefab: {fileID: 1412742708598286, guid: f541725f154c7ce478ea425202882059, type: 3}
+  spawnablePrefabs:
+  - {fileID: 1412742708598286, guid: b12d90c39ad784e4dadc3ff400414632, type: 3}
+  - {fileID: 2638649845463096286, guid: f0f8646a3feaba64dadb2dd49462af36, type: 3}
   spawnRadius: 1250
   spawnInterval: 2
   maxSpawnedObjects: 10

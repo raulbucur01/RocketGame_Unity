@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ArcadeObjectSpawner : MonoBehaviour
 {
-    public GameObject spawnablePrefab; // The prefab to spawn
+    public GameObject[] spawnablePrefabs; // Array of prefabs to spawn // The prefab to spawn
     public float spawnRadius = 250f;   // Radius around the ship where objects spawn
     public float spawnInterval = 2f;   // Time between spawns
     public int maxSpawnedObjects = 10; // Maximum number of objects at a time
@@ -17,8 +17,11 @@ public class ArcadeObjectSpawner : MonoBehaviour
 
     void SpawnObject()
     {
-        if (currentObjectCount >= maxSpawnedObjects || spawnablePrefab == null)
+        if (currentObjectCount >= maxSpawnedObjects || spawnablePrefabs.Length == 0)
             return;
+
+        // Randomly select a prefab from the array
+        GameObject selectedPrefab = spawnablePrefabs[Random.Range(0, spawnablePrefabs.Length)];
 
         // Random position around the ship within the spawn radius
         Vector3 spawnPosition = transform.position + Random.onUnitSphere * spawnRadius;
@@ -30,7 +33,7 @@ public class ArcadeObjectSpawner : MonoBehaviour
         Quaternion randomRotation = Random.rotation;
 
         // Spawn the object with random rotation
-        GameObject newObject = Instantiate(spawnablePrefab, spawnPosition, randomRotation);
+        GameObject newObject = Instantiate(selectedPrefab, spawnPosition, randomRotation);
 
         // Add random movement
         Rigidbody rb = newObject.GetComponent<Rigidbody>();
