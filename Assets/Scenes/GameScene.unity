@@ -5099,12 +5099,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247116145}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.98480785, z: 0.17364818, w: 0}
+  m_LocalPosition: {x: 0, y: -0.6772321, z: 21.530022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 376245840}
+  m_Father: {fileID: 433770906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &247116147
 AudioSource:
@@ -5119,7 +5119,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 1a790d606843dee4480e4fb16867acfd, type: 3}
   m_Resource: {fileID: 8300000, guid: 1a790d606843dee4480e4fb16867acfd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.137
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5163,7 +5163,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.12
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5345,9 +5345,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       insertIndex: -1
       addedObject: {fileID: 245640707}
-    - targetCorrespondingSourceObject: {fileID: 400006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 247116146}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100006, guid: 18107e17ef1c3e644aa61aef308f6759, type: 3}
       insertIndex: -1
@@ -5541,7 +5538,8 @@ Transform:
   m_LocalPosition: {x: -6872.0977, y: 8250.238, z: -1097.4752}
   m_LocalScale: {x: 2.500001, y: 2.4999998, z: 2.500001}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 247116146}
   m_Father: {fileID: 2091617789}
   m_LocalEulerAnglesHint: {x: 20, y: 180, z: 0}
 --- !u!114 &433770907

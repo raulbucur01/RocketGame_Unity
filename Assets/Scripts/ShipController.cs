@@ -214,7 +214,6 @@ public class RocketController : MonoBehaviour
     private async Task GameOver(string text)
     {
         Destroy(_booster);
-        Destroy(_bgMusic);
         
         // Fade to black
         while(_screenBlackout.color.a < 1)
