@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4f36583-01d5-4039-abcc-e56ea7d3aa42" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Cobble Games/Spaceship/HDRP/HDRP.unitypackage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Cobble Games/Spaceship/URP/URP.unitypackage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/F3_Corvette.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/F3_Corvette.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/F3_Green.FBX" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/F3_Green.FBX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/F3_Grey.FBX" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/F3_Grey.FBX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/F3_Red.FBX" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/F3_Red.FBX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/F3_Yellow.FBX" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/F3_Yellow.FBX.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/Materials/F3_Green.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/Materials/F3_Green.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/Materials/F3_Grey.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/Materials/F3_Grey.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/Materials/F3_Red.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/Materials/F3_Red.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/Materials/F3_Yellow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Meshes/Materials/F3_Yellow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Prefabs/F3_Green Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Prefabs/F3_Green Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Prefabs/F3_Grey Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Prefabs/F3_Grey Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Prefabs/F3_Red Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Prefabs/F3_Red Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Prefabs/F3_Yellow Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Prefabs/F3_Yellow Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_AO.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_AO.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_Green.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_Green.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_Grey.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_Grey.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_Red.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_Red.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_Yellow.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_Yellow.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_glow.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_glow.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_metallic.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_metallic.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_normal.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_normal.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_roughness.tif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/F3_Corvette/Textures/F3_roughness.tif.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Animations/Explosive Force Field.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Animations/Explosive Force Field.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Animations/_Explosion (BASE).controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Animations/_Explosion (BASE).controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Demo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Demo/Plane.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Demo/Plane.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Demo/Spark.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Demo/Spark.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion 2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion 2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion 3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion 3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion FREE 1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion FREE 1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion FREE 2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion FREE 2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion FREE 3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion FREE 3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion FREE 4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Explosions/Explosion FREE 4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Lights.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Lights/Blue.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Lights/Blue.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Lights/Green.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Lights/Green.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Lights/Red.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Lights/Red.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Smoke.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Smoke/Smoke Field.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Smoke/Smoke Field.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Smoke/Smoke.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Materials/Smoke/Smoke.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Button.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Button.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion 2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion 2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion 3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion 3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion FREE 1 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion FREE 1 Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion FREE 2 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion FREE 2 Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion FREE 3 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion FREE 3 Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion FREE 4 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/Explosion FREE 4 Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/_Explosion (BASE).prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/_Explosion (BASE).prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/_Explosion FREE (BASE).prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Explosions/_Explosion FREE (BASE).prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Lights.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Lights/Particle Light.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Lights/Particle Light.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Lights/_Light.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Lights/_Light.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Smoke.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Smoke/Smoke 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Prefabs/Smoke/Smoke 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scenes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scenes/Cinematic Explosions FREE (Demo).meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scenes/Cinematic Explosions FREE (Demo).unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scenes/Cinematic Explosions FREE (Demo).unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scenes/Cinematic Explosions FREE (Demo)/Global Volume Profile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scenes/Cinematic Explosions FREE (Demo)/Global Volume Profile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scripts/CustomImpulse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scripts/CustomImpulse.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scripts/DemoController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scripts/DemoController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scripts/FPSDisplay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scripts/FPSDisplay.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scripts/FPSTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Scripts/FPSTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 1/Explosion1_emissive_and_scattering.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 1/Explosion1_emissive_and_scattering.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 1/Explosion1_gradient_based_normal_map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 1/Explosion1_gradient_based_normal_map.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 1/Explosion1_smoke_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 1/Explosion1_smoke_mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 2/Explosion2_emissive_and_scattering.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 2/Explosion2_emissive_and_scattering.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 2/Explosion2_gradient_based_normal_map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 2/Explosion2_gradient_based_normal_map.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 2/Explosion2_smoke_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 2/Explosion2_smoke_mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 3/Explosion3_emissive_and_scattering.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 3/Explosion3_emissive_and_scattering.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 3/Explosion3_gradient_based_normal_map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 3/Explosion3_gradient_based_normal_map.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 3/Explosion3_smoke_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion 3/Explosion3_smoke_mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion FREE 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion FREE 1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion FREE 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion FREE 2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion FREE 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion FREE 3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion FREE 4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Explosions/Explosion FREE 4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Smoke.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Smoke/Smoke1_Gradient Based Normal Map_8x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Smoke/Smoke1_Gradient Based Normal Map_8x16.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Smoke/Smoke1_Render All_8x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Mirza Beig/Cinematic Explosions FREE/Textures/Smoke/Smoke1_Render All_8x16.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeBigExplosion.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeHUGEExplosion.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeMagellan.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeMagellan.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeRocketExplosion.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeSputnik.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/EnemyShip.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/EnemyShip.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/Sphere.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/Sphere.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/enemy_warhead.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/enemy_warhead.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/ShootingArcadeScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/ShootingArcadeScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeDestructibleObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeDestructibleObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeEnemyRocket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeEnemyRocket.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeEnemyShip.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeEnemyShip.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeExplosionCleanup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeExplosionCleanup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeIndestructibleObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeIndestructibleObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeObjectSpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeObjectSpawner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeRocket.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeShipControls.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeShipControls.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/magellan/ArcadeMagellan.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/magellan/ArcadeMagellan.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Asteroids Pack/Assets/Materials/small_asteroid.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Asteroids Pack/Assets/Materials/small_asteroid.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Planet Earth Free/Materials/Earth1kMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Planet Earth Free/Materials/Earth1kMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Planet Earth Free/Materials/Earth2kMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Planet Earth Free/Materials/Earth2kMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Planet Earth Free/Materials/Materials/Earth4kTexture.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Planet Earth Free/Materials/Materials/Earth4kTexture.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RocketTrailMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RocketTrailMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead 1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeHUGEExplosion.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead 2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeSputnik.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead Variant1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead Variant1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeBigExplosion.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead Variant2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead Variant2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/ArcadeRocketExplosion.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/warhead.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/warhead.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ArcadeScenePrefabs/warhead.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ArcadeRocket.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity UI Samples/Materials/Slider Background.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unity UI Samples/Materials/Slider Background.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity UI Samples/Materials/Slider Fill.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unity UI Samples/Materials/Slider Fill.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity UI Samples/Materials/Slider Knob.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unity UI Samples/Materials/Slider Knob.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity UI Samples/Materials/Window.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unity UI Samples/Materials/Window.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity UI Samples/Models/Materials/vehicle_rcFlyer_dome_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unity UI Samples/Models/Materials/vehicle_rcFlyer_dome_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity UI Samples/Models/Materials/vehicle_rcFlyer_metal_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unity UI Samples/Models/Materials/vehicle_rcFlyer_metal_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/magellan/maggellan_ex.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/magellan/maggellan_ex.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/project/Sputnik_1/Prefabs/Sputnik_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/project/Sputnik_1/Prefabs/Sputnik_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2rMBRKnxaJlnOE3NyG9DygyVveD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging main"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4f36583-01d5-4039-abcc-e56ea7d3aa42" name="Changes" comment="" />
+      <created>1736359054780</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736359054780</updated>
+    </task>
+    <servers />
+  </component>
+</project>
