@@ -1,6 +1,10 @@
 using System;
+using System.Net.Mime;
 using System.Net.Sockets;
+using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RocketController : MonoBehaviour
 {
@@ -26,7 +30,10 @@ public class RocketController : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private float _cameraFollowSpeed;
     
+    [Header("Other")]
     [SerializeField] private GameObject _explosionPrefab;
+    [SerializeField] private TextMeshProUGUI _uiText;
+    [SerializeField] private Image _screenBlackout;
 
     private Rigidbody rb;
     private float currentSpeed;
@@ -172,13 +179,39 @@ public class RocketController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject)
+        // Instantiate explosion effect
+        Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+
+        // Destroy the ship
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Wall")
         {
-            // Instantiate explosion effect
-            Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
-            
-            // Destroy the ship
-            Destroy(gameObject);
+            GameOver();
+        }
+    }
+
+    private async Task GameOver()
+    {
+        // Fade to black
+        while(_screenBlackout.color.a < 1)
+        {
+            _screenBlackout.color = new Color(0, 0, 0, _screenBlackout.color.a + Time.deltaTime);
+            await Task.Delay(20);
+        }
+        
+        // Wait for 2 seconds
+        await Task.Delay(2000);
+        
+        // make text add letters one by one
+        var text = "You lost your objective";
+        for (int i = 0; i < text.Length; i++)
+        {
+            _uiText.text += text[i];
+            await Task.Delay(100);
         }
     }
 }

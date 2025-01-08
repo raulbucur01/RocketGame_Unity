@@ -32,7 +32,7 @@ public class AsteroidMovement : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Move()
     {
         // Aplică mișcarea în funcție de tipul selectat
         switch (currentMovement)
