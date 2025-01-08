@@ -1,8 +1,23 @@
 using System.Net.Sockets;
 using UnityEngine;
+using System;
+using System.Collections.Generic;
+using System.Net.Mime;
+using System.Net.Sockets;
+using System.Threading.Tasks;
+using TMPro;
+using UnityEngine.UI;
 
 public class ArcadeShipControls: MonoBehaviour
 {
+    [Header("Health Settings")]
+    public int maxHealth = 100;   // Maximum health of the ship
+    private int currentHealth;    // Current health of the ship
+
+    [Header("Explosion Settings")]
+    public GameObject explosionPrefab;  // Assign an explosion prefab here
+    public float explosionDuration = 2f; // Time before transitioning to Game Over
+
     [Header("Movement Settings")]
     public float forwardSpeed = 50f;       // Normal forward speed
     public float boostedSpeed = 70f;      // Speed when Space is pressed
@@ -25,13 +40,110 @@ public class ArcadeShipControls: MonoBehaviour
     private float currentSpeed;
     private float lastFireTime;
 
+    [Header("Other")]
+    [SerializeField] private TextMeshProUGUI _uiText;
+    [SerializeField] private Image _screenBlackout;
+    [SerializeField] private GameObject _gameOverButton;
+    [SerializeField] private GameObject _quitButton;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _explosionSound;
+    [SerializeField] private AudioClip _typeSound;
+    [SerializeField] private List<GameObject> _shipParts;
+    [SerializeField] private GameObject _booster;
+    [SerializeField] private GameObject _bgMusic;
+
+    [Header("Cameras")]
+    public Camera mainCamera;       // Main gameplay camera
+    public Camera gameOverCamera;   // Secondary camera for Game Over scene
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.linearDamping = 5f; // Adjust drag to resist movement
         rb.angularDamping = 5f; // To reduce rotation as well
         currentSpeed = forwardSpeed; // Start with normal forward speed
+        currentHealth = maxHealth; // Initialize health
+        _gameOverButton.SetActive(false);
+        _quitButton.SetActive(false);
+
+        // Ensure the main camera is active when the game starts
+        if (mainCamera != null)
+        {
+            mainCamera.enabled = true;
+        }
+
+        // Ensure the game over camera is disabled at the start
+        if (gameOverCamera != null)
+        {
+            gameOverCamera.enabled = false;
+        }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Check if collided object has the "EnemyRocket" tag
+        if (collision.gameObject.CompareTag("EnemyRocket"))
+        {
+            TakeDamage(20); // Apply 20 damage points
+            Destroy(collision.gameObject); // Destroy the enemy rocket
+        }
+    }
+
+    private void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        Debug.Log($"Ship took {damage} damage! Current health: {currentHealth}");
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Debug.Log("Ship destroyed!");
+
+        // Deactivate the ship's collider to prevent further collisions
+        Collider shipCollider = GetComponent<Collider>();
+        if (shipCollider != null)
+        {
+            shipCollider.enabled = false; // Disable the collider
+        }
+
+        // Detach the main camera from the ship and deactivate it
+        if (mainCamera != null)
+        {
+            // Set the game over camera's position and rotation to match the main camera
+            if (gameOverCamera != null)
+            {
+                gameOverCamera.transform.position = mainCamera.transform.position;
+                gameOverCamera.transform.rotation = mainCamera.transform.rotation;
+            }
+
+            mainCamera.transform.SetParent(null);
+            mainCamera.enabled = false;
+        }
+
+        // Activate the secondary camera
+        if (gameOverCamera != null)
+        {
+            gameOverCamera.enabled = true;
+        }
+
+        // Instantiate explosion effect
+        if (explosionPrefab != null)
+        {
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
+        }
+
+        // Destroy the ship
+        Destroy(gameObject);
+
+        // Transition to the Game Over screen after showing the explosion
+        GameOverScreen("Your ship is done for!");
+    }
+
 
     void Update()
     {
@@ -155,4 +267,30 @@ public class ArcadeShipControls: MonoBehaviour
         }
     }
 
+    private async Task GameOverScreen(string text)
+    {
+        Destroy(_booster);
+        
+        // Fade to black
+        while (_screenBlackout.color.a < 1)
+        {
+            _screenBlackout.color = new Color(0, 0, 0, _screenBlackout.color.a + Time.deltaTime);
+            await Task.Delay(20);
+        }
+
+        // Wait for 2 seconds
+        await Task.Delay(2000);
+
+        // make text add letters one by one
+        for (int i = 0; i < text.Length; i++)
+        {
+            _uiText.text += text[i];
+            _audioSource.PlayOneShot(_typeSound);
+            await Task.Delay(100);
+        }
+
+        await Task.Delay(1000);
+        _gameOverButton.SetActive(true);
+        _quitButton.SetActive(true);
+    }
 }
