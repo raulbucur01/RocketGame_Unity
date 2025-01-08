@@ -1,20 +1,27 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 
 public class MenuButtons : MonoBehaviour
 {
     [SerializeField] private GameObject rocketPrefab;
-    [SerializeField] private CameraFollow cameraFollow; // Scriptul CameraFollow
+    [SerializeField] private CircularCameraMovement cameraFollow; // Scriptul CameraFollow
 
     public float takeoffDuration = 3f;
 
-    public void PlayGame()
+    private void Start()
     {
-        Animatie();
+        rocketPrefab.transform.position = new Vector3(185, 19.5f, 523.1f);
+        rocketPrefab.transform.rotation = Quaternion.Euler(0.4f, -9.91f, 2.139f);
     }
 
-    private async void Animatie()
+    public void PlayGame()
+    {
+        Animatie(1);
+    }
+
+    private async Task Animatie(int level)
     {
         if (rocketPrefab == null)
         {
@@ -42,20 +49,42 @@ public class MenuButtons : MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < takeoffDuration)
         {
-            elapsedTime += Time.deltaTime;
+            elapsedTime += 0.1f;
             float progress = elapsedTime / takeoffDuration;
-            rocketTransform.position = startPosition + new Vector3(0, progress * 10f, progress * 2f); // Mișcare
-            await Task.Yield();
+            rocketTransform.position = startPosition + new Vector3(0, progress * 20f, 0); // Mișcare
+            await Task.Delay(20);
+        }
+        
+        startPosition = rocketTransform.position;
+
+        elapsedTime = 3f;
+        while (elapsedTime < takeoffDuration)
+        {
+            elapsedTime += 0.1f;
+            float progress = elapsedTime / takeoffDuration;
+            rocketTransform.position = startPosition + new Vector3(0, 0, 0);
+            rocketTransform.rotation *= Quaternion.Euler(1.1f, 0, 0);
+            await Task.Delay(20);
+        }
+        
+        startPosition = rocketTransform.position;
+        
+        elapsedTime = 0f;
+        while (elapsedTime < takeoffDuration)
+        {
+            elapsedTime += 0.1f;
+            float progress = elapsedTime / takeoffDuration;
+            rocketTransform.position = startPosition + new Vector3(0, progress * 100f, progress * -300f); // Mișcare
+            await Task.Delay(20);
         }
 
         // Încărcăm scena după animație
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(level);
     }
 
     public void PlayArcade()
     {
-        // Load the next scene in the build settings.
-        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        Animatie(2);
     }
     
     public void QuitGame()

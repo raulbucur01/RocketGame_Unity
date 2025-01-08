@@ -6,6 +6,7 @@ using System.Net.Mime;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using TMPro;
+using UnityEngine.Rendering.UI;
 using UnityEngine.UI;
 
 public class ArcadeShipControls: MonoBehaviour
@@ -78,6 +79,7 @@ public class ArcadeShipControls: MonoBehaviour
         {
             gameOverCamera.enabled = false;
         }
+        Die();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -85,6 +87,10 @@ public class ArcadeShipControls: MonoBehaviour
         // Check if collided object has the "EnemyRocket" tag
         if (collision.gameObject.CompareTag("EnemyRocket"))
         {
+            if(currentHealth <= 0)
+            {
+                return;
+            }
             TakeDamage(20); // Apply 20 damage points
             _audioSource.PlayOneShot(_damageSound);
             Destroy(collision.gameObject); // Destroy the enemy rocket

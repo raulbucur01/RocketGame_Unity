@@ -3050,6 +3050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketPrefab: {fileID: 240332408}
+  cameraFollow: {fileID: 1542196947}
   takeoffDuration: 7
 --- !u!4 &1658583234
 Transform:
