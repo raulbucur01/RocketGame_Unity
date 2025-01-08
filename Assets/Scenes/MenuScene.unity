@@ -2108,6 +2108,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2573636489882068963, guid: cab9a19b330810f4e904d2a330b72cb0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b19bce950a922ea4cad65b471fe165b1, type: 2}
     - target: {fileID: -927199367670048503, guid: cab9a19b330810f4e904d2a330b72cb0, type: 3}
       propertyPath: m_Name
       value: Satellite Dish

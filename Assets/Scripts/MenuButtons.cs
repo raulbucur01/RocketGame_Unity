@@ -89,6 +89,6 @@ public class MenuButtons : MonoBehaviour
     
     public void QuitGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        Application.Quit();
     }
 }
