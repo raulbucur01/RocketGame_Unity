@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net.Mime;
 using System.Net.Sockets;
 using System.Threading.Tasks;
@@ -38,9 +39,11 @@ public class RocketController : MonoBehaviour
     [SerializeField] private GameObject _quitButton;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _explosionSound;
-    [SerializeField] private AudioClip _rocketSound;
     [SerializeField] private AudioClip _typeSound;
-
+    [SerializeField] private List<GameObject> _shipParts;
+    [SerializeField] private GameObject _booster;
+    [SerializeField] private GameObject _bgMusic;
+ 
     private Rigidbody rb;
     private float currentSpeed;
     private float lastFireTime;
@@ -188,10 +191,16 @@ public class RocketController : MonoBehaviour
         // Instantiate explosion effect
         Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
 
-        // Destroy the ship
-        Destroy(gameObject);
+        // Destroy the rendered ship
+        foreach (var part in _shipParts)
+            Destroy(part);
         
-        GameOver("You crashed into an asteroid");
+        GetComponent<Collider>().enabled = false;
+        
+        // Play explosion sound
+        _audioSource.PlayOneShot(_explosionSound);
+        
+        GameOver("You crashed");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -204,6 +213,9 @@ public class RocketController : MonoBehaviour
 
     private async Task GameOver(string text)
     {
+        Destroy(_booster);
+        Destroy(_bgMusic);
+        
         // Fade to black
         while(_screenBlackout.color.a < 1)
         {

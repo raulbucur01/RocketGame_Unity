@@ -10,6 +10,6 @@ public class MenuButtons : MonoBehaviour
     
     public void QuitGame()
     {
-        Application.Quit();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
