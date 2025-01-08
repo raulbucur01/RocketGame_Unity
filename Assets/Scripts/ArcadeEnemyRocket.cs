@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ArcadeRocket : MonoBehaviour
+public class ArcadeEnemyRocket : MonoBehaviour
 {
     public float lifetime = 5f; // Time before the rocket is destroyed
     public GameObject explosionPrefab; // Explosion effect prefab
@@ -13,7 +13,7 @@ public class ArcadeRocket : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Shootable") || collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Shootable") || !(collision.gameObject.CompareTag("Enemy")) || collision.gameObject.CompareTag("Player"))
         {
             // Instantiate the explosion effect
             TriggerExplosion();
@@ -31,6 +31,4 @@ public class ArcadeRocket : MonoBehaviour
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
     }
-
-
 }

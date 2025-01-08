@@ -28,6 +28,8 @@ public class ArcadeShipControls: MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.linearDamping = 5f; // Adjust drag to resist movement
+        rb.angularDamping = 5f; // To reduce rotation as well
         currentSpeed = forwardSpeed; // Start with normal forward speed
     }
 
@@ -115,6 +117,23 @@ public class ArcadeShipControls: MonoBehaviour
         // Instantiate the rocket at the rocket launcher's position and rotation
         GameObject rocket1 = Instantiate(rocketPrefab, rocketLauncher1.position, rocketLauncher1.rotation);
         GameObject rocket2 = Instantiate(rocketPrefab, rocketLauncher2.position, rocketLauncher2.rotation);
+
+        // Get the colliders of the player ship and the rockets
+        Collider playerCollider = GetComponent<Collider>();
+        Collider rocketCollider1 = rocket1.GetComponent<Collider>();
+        Collider rocketCollider2 = rocket2.GetComponent<Collider>();
+
+        if (playerCollider != null && rocketCollider1 != null)
+        {
+            // Ignore collisions between the player ship and the first rocket
+            Physics.IgnoreCollision(playerCollider, rocketCollider1);
+        }
+
+        if (playerCollider != null && rocketCollider2 != null)
+        {
+            // Ignore collisions between the player ship and the second rocket
+            Physics.IgnoreCollision(playerCollider, rocketCollider2);
+        }
 
         // Apply force to propel the rocket in the ship's moving direction
         Rigidbody rocketRb1 = rocket1.GetComponent<Rigidbody>();

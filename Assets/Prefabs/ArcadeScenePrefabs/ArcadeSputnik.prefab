@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  explosionPrefab: {fileID: 1007127540951276732, guid: e9b12b956436ba340be4238eac3f3840, type: 3}
+  explosionPrefab: {fileID: 1007127540951276732, guid: ddba6daf1c2ddf0478842d2da7125ade, type: 3}
 --- !u!1 &6740383948070975260
 GameObject:
   m_ObjectHideFlags: 0
