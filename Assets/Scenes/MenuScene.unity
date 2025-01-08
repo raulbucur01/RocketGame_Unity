@@ -3049,6 +3049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b764eca2b54ad42bec74fc5f4775ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rocketPrefab: {fileID: 240332408}
+  takeoffDuration: 7
 --- !u!4 &1658583234
 Transform:
   m_ObjectHideFlags: 0
