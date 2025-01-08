@@ -48,6 +48,7 @@ public class ArcadeShipControls: MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _explosionSound;
     [SerializeField] private AudioClip _typeSound;
+    [SerializeField] private AudioClip _damageSound;
     [SerializeField] private List<GameObject> _shipParts;
     [SerializeField] private GameObject _booster;
     [SerializeField] private GameObject _bgMusic;
@@ -85,6 +86,7 @@ public class ArcadeShipControls: MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyRocket"))
         {
             TakeDamage(20); // Apply 20 damage points
+            _audioSource.PlayOneShot(_damageSound);
             Destroy(collision.gameObject); // Destroy the enemy rocket
         }
     }
@@ -104,27 +106,8 @@ public class ArcadeShipControls: MonoBehaviour
     {
         Debug.Log("Ship destroyed!");
 
-        
-
-        // Detach the main camera from the ship and deactivate it
-        if (mainCamera != null)
-        {
-            // Set the game over camera's position and rotation to match the main camera
-            if (gameOverCamera != null)
-            {
-                gameOverCamera.transform.position = mainCamera.transform.position;
-                gameOverCamera.transform.rotation = mainCamera.transform.rotation;
-            }
-
-            mainCamera.transform.SetParent(null);
-            mainCamera.enabled = false;
-        }
-
-        // Activate the secondary camera
-        if (gameOverCamera != null)
-        {
-            gameOverCamera.enabled = true;
-        }
+        // Play explosion sound
+        _audioSource.PlayOneShot(_explosionSound);
 
         // Instantiate explosion effect
         if (explosionPrefab != null)
@@ -133,7 +116,10 @@ public class ArcadeShipControls: MonoBehaviour
         }
 
         // Destroy the ship
-        Destroy(gameObject);
+        foreach (var shipPart in _shipParts)
+        {
+            Destroy(shipPart);
+        }
 
         // Transition to the Game Over screen after showing the explosion
         GameOverScreen("Your ship is done for!");
@@ -166,6 +152,12 @@ public class ArcadeShipControls: MonoBehaviour
         var effect2Emission = effect2.emission;
         var effect3Emission = effect3.emission;
         var effect4Emission = effect4.emission;
+        
+        if(effect1 == null || effect2 == null || effect3 == null || effect4 == null)
+        {
+            Debug.LogWarning("Particle emission is missing!");
+            return;
+        }
 
         effect1Emission.rateOverTime = newRate;
         effect2Emission.rateOverTime = newRate;
@@ -265,11 +257,8 @@ public class ArcadeShipControls: MonoBehaviour
     private async Task GameOverScreen(string text)
     {
         // Deactivate the ship's collider to prevent further collisions
-        Collider shipCollider = GetComponent<Collider>();
-        if (shipCollider != null)
-        {
-            shipCollider.enabled = false; // Disable the collider
-        }
+        var shipCollider = GetComponent<Collider>();
+        shipCollider.enabled = false;
         Destroy(_booster);
         
         // Fade to black
