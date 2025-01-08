@@ -34,6 +34,12 @@ public class RocketController : MonoBehaviour
     [SerializeField] private GameObject _explosionPrefab;
     [SerializeField] private TextMeshProUGUI _uiText;
     [SerializeField] private Image _screenBlackout;
+    [SerializeField] private GameObject _gameOverButton;
+    [SerializeField] private GameObject _quitButton;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _explosionSound;
+    [SerializeField] private AudioClip _rocketSound;
+    [SerializeField] private AudioClip _typeSound;
 
     private Rigidbody rb;
     private float currentSpeed;
@@ -184,17 +190,19 @@ public class RocketController : MonoBehaviour
 
         // Destroy the ship
         Destroy(gameObject);
+        
+        GameOver("You crashed into an asteroid");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Wall")
         {
-            GameOver();
+            GameOver("You lost your objective");
         }
     }
 
-    private async Task GameOver()
+    private async Task GameOver(string text)
     {
         // Fade to black
         while(_screenBlackout.color.a < 1)
@@ -207,11 +215,15 @@ public class RocketController : MonoBehaviour
         await Task.Delay(2000);
         
         // make text add letters one by one
-        var text = "You lost your objective";
         for (int i = 0; i < text.Length; i++)
         {
             _uiText.text += text[i];
+            _audioSource.PlayOneShot(_typeSound);
             await Task.Delay(100);
         }
+        
+        await Task.Delay(1000);
+        _gameOverButton.SetActive(true);
+        _quitButton.SetActive(true);
     }
 }
