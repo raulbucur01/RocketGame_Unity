@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 10
+  explosionPrefab: {fileID: 1620140131458704099, guid: a4508ed07aebb844da3556a3c9ba80f5, type: 3}
 --- !u!96 &2016059059753916546
 TrailRenderer:
   serializedVersion: 3

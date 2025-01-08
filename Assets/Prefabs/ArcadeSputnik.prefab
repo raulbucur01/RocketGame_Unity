@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 2358518880732726349}
   m_Layer: 0
   m_Name: ArcadeSputnik
-  m_TagString: Untagged
+  m_TagString: Shootable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  explosionPrefab: {fileID: 1007127540951276732, guid: e9b12b956436ba340be4238eac3f3840, type: 3}
 --- !u!1 &6740383948070975260
 GameObject:
   m_ObjectHideFlags: 0

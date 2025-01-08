@@ -8,6 +8,8 @@ public class ArcadeDestructibleObject : MonoBehaviour
     private ArcadeObjectSpawner spawner; // Reference to the spawner
     private Rigidbody rb;
 
+    public GameObject explosionPrefab;
+
     void Start()
     {
         currentHealth = maxHealth; // Initialize health
@@ -25,8 +27,6 @@ public class ArcadeDestructibleObject : MonoBehaviour
         // Check if the collision is with a rocket
         if (collision.gameObject.CompareTag("Rocket"))
         {
-            Debug.Log("Rocket hit: " + collision.gameObject.name);
-
             // Apply damage
             float damage = 20f; // Adjust damage as needed
             TakeDamage(damage);
@@ -53,7 +53,6 @@ public class ArcadeDestructibleObject : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        Debug.Log("TakeDamage, currentHealth: " + currentHealth);
         // Update health bar UI (see **2. Health Bar UI**)
         //UpdateHealthBar();
 
@@ -65,6 +64,12 @@ public class ArcadeDestructibleObject : MonoBehaviour
 
     private void DestroyObject()
     {
+        // Instantiate explosion effect
+        if (explosionPrefab != null)
+        {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        }
+
         // Notify the spawner that this object is destroyed
         spawner?.ObjectDestroyed();
 
