@@ -79,7 +79,6 @@ public class ArcadeShipControls: MonoBehaviour
         {
             gameOverCamera.enabled = false;
         }
-        Die();
     }
 
     private void OnCollisionEnter(Collision collision)

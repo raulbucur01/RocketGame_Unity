@@ -219,7 +219,7 @@ public class RocketController : MonoBehaviour
         }
         else
         {
-            EndGame("You reached your destination       Thank you For Playing our Game", true);
+            EndGame("You reached your destination       Donate, we are hungry!", true);
         }
     }
 

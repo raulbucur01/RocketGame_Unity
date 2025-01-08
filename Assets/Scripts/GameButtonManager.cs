@@ -4,11 +4,12 @@ public class GameButtonManager : MonoBehaviour
 {
     public void RestartLevel()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        //load current scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
     
     public void QuitGame()
     {
-        Application.Quit();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
