@@ -9,30 +9,33 @@ using UnityEngine.UI;
 
 public class RocketController : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    [SerializeField] private float forwardSpeed = 50f;       // Normal forward speed
-    [SerializeField] private float boostedSpeed = 70f;      // Speed when Space is pressed
+    [Header("Movement Settings")] [SerializeField]
+    private float forwardSpeed = 50f; // Normal forward speed
+
+    [SerializeField] private float boostedSpeed = 70f; // Speed when Space is pressed
     [SerializeField] private float baseRotationSpeed = 100f; // Base rotation speed
 
-    [Header("Shooting Settings")]
-    [SerializeField] private GameObject rocketPrefab;      // Rocket prefab
-    [SerializeField] private Transform rocketLauncher1;          // Fire point for shooting rockets
-    [SerializeField] private Transform rocketLauncher2;          // Fire point for shooting rockets
-    [SerializeField] private float rocketSpeed = 10f;      // Speed of the rocket
+    [Header("Shooting Settings")] [SerializeField]
+    private GameObject rocketPrefab; // Rocket prefab
+
+    [SerializeField] private Transform rocketLauncher1; // Fire point for shooting rockets
+    [SerializeField] private Transform rocketLauncher2; // Fire point for shooting rockets
+    [SerializeField] private float rocketSpeed = 10f; // Speed of the rocket
     [SerializeField] private float fireRate = 0.5f;
 
-    [Header("Particle Effects")]
-    [SerializeField] private ParticleSystem effect1;   // Particle effect 1 (e.g., engine 1)
-    [SerializeField] private ParticleSystem effect2;   // Particle effect 2 (e.g., engine 2)
-    [SerializeField] private ParticleSystem effect3;   // Particle effect 3 (e.g., engine 3)
+    [Header("Particle Effects")] [SerializeField]
+    private ParticleSystem effect1; // Particle effect 1 (e.g., engine 1)
+
+    [SerializeField] private ParticleSystem effect2; // Particle effect 2 (e.g., engine 2)
+    [SerializeField] private ParticleSystem effect3; // Particle effect 3 (e.g., engine 3)
     [SerializeField] private ParticleSystem effect4;
-    
-    [Header("Camera Settings")]
-    [SerializeField] private Camera _camera;
+
+    [Header("Camera Settings")] [SerializeField]
+    private Camera _camera;
+
     [SerializeField] private float _cameraFollowSpeed;
-    
-    [Header("Other")]
-    [SerializeField] private GameObject _explosionPrefab;
+
+    [Header("Other")] [SerializeField] private GameObject _explosionPrefab;
     [SerializeField] private TextMeshProUGUI _uiText;
     [SerializeField] private Image _screenBlackout;
     [SerializeField] private GameObject _gameOverButton;
@@ -43,11 +46,12 @@ public class RocketController : MonoBehaviour
     [SerializeField] private List<GameObject> _shipParts;
     [SerializeField] private GameObject _booster;
     [SerializeField] private GameObject _bgMusic;
- 
+    [SerializeField] private AudioClip _winSound;
+
     private Rigidbody rb;
     private float currentSpeed;
     private float lastFireTime;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -74,9 +78,9 @@ public class RocketController : MonoBehaviour
 
         // Smoothly move the camera towards the target position using SmoothDamp
         _camera.transform.position = Vector3.SmoothDamp(
-            _camera.transform.position, 
-            targetPosition, 
-            ref _currentVelocity, 
+            _camera.transform.position,
+            targetPosition,
+            ref _currentVelocity,
             _cameraFollowSpeed // Ajustează timpul dorit pentru tranziție
         );
 
@@ -86,7 +90,7 @@ public class RocketController : MonoBehaviour
 
         _camera.transform.rotation = Quaternion.LookRotation(lookAtTarget - _camera.transform.position, upDirection);
     }
-    
+
 
     private void HandleMovement()
     {
@@ -116,20 +120,21 @@ public class RocketController : MonoBehaviour
 
     private void HandleRotation()
     {
-        float XAxisRotation = 0f;  // Up/Down rotation
+        float XAxisRotation = 0f; // Up/Down rotation
         float ZAxisRotation = 0f; // Left/Right rotation
         float YAxisRotation = 0f;
 
         // Adjust rotation based on WASD keys
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) XAxisRotation = 1f;   // Rotate up
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) XAxisRotation = -1f;  // Rotate down
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) XAxisRotation = 1f; // Rotate up
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) XAxisRotation = -1f; // Rotate down
         if (Input.GetKey(KeyCode.Q)) ZAxisRotation = -1f; // Roll left
         if (Input.GetKey(KeyCode.E)) ZAxisRotation = 1f; // Roll right
-        if (Input.GetKey(KeyCode.A)  || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             YAxisRotation = -1f;
             ZAxisRotation = -0.2f; // Slight roll to the left
         }
+
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             YAxisRotation = 1f;
@@ -140,7 +145,8 @@ public class RocketController : MonoBehaviour
         float scaledRotationSpeed = baseRotationSpeed * (currentSpeed / boostedSpeed);
 
         // Apply rotation to the transform
-        Vector3 rotation = new Vector3(XAxisRotation, YAxisRotation, ZAxisRotation) * scaledRotationSpeed * Time.deltaTime;
+        Vector3 rotation = new Vector3(XAxisRotation, YAxisRotation, ZAxisRotation) * scaledRotationSpeed *
+                           Time.deltaTime;
         transform.Rotate(rotation, Space.Self);
     }
 
@@ -159,9 +165,9 @@ public class RocketController : MonoBehaviour
         if (rocketPrefab == null || rocketLauncher1 == null || rocketLauncher2 == null)
         {
             Debug.LogWarning("Rocket prefab or rocket launcher is missing!");
-            return; 
+            return;
         }
-        
+
         // Instantiate the rocket at the rocket launcher's position and rotation
         GameObject rocket1 = Instantiate(rocketPrefab, rocketLauncher1.position, rocketLauncher1.rotation);
         GameObject rocket2 = Instantiate(rocketPrefab, rocketLauncher2.position, rocketLauncher2.rotation);
@@ -194,37 +200,47 @@ public class RocketController : MonoBehaviour
         // Destroy the rendered ship
         foreach (var part in _shipParts)
             Destroy(part);
-        
+
         GetComponent<Collider>().enabled = false;
-        
+
         // Play explosion sound
         _audioSource.PlayOneShot(_explosionSound);
-        
-        GameOver("You crashed");
+
+        EndGame("You crashed");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Wall")
         {
-            GameOver("You lost your objective");
+            EndGame("You lost your objective");
+        }
+        else
+        {
+            EndGame("You reached your destination       Thank you For Playing our Game", true);
         }
     }
 
-    private async Task GameOver(string text)
+    private async Task EndGame(string text, bool win = false)
     {
         Destroy(_booster);
         
+        if (win)
+        {
+            _audioSource.PlayOneShot(_winSound);
+            _bgMusic.SetActive(false);
+        }
+
         // Fade to black
-        while(_screenBlackout.color.a < 1)
+        while (_screenBlackout.color.a < 1)
         {
             _screenBlackout.color = new Color(0, 0, 0, _screenBlackout.color.a + Time.deltaTime);
             await Task.Delay(20);
         }
-        
+
         // Wait for 2 seconds
         await Task.Delay(2000);
-        
+
         // make text add letters one by one
         for (int i = 0; i < text.Length; i++)
         {
@@ -232,7 +248,7 @@ public class RocketController : MonoBehaviour
             _audioSource.PlayOneShot(_typeSound);
             await Task.Delay(100);
         }
-        
+
         await Task.Delay(1000);
         _gameOverButton.SetActive(true);
         _quitButton.SetActive(true);
