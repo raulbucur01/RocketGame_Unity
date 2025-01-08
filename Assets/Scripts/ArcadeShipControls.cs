@@ -104,12 +104,7 @@ public class ArcadeShipControls: MonoBehaviour
     {
         Debug.Log("Ship destroyed!");
 
-        // Deactivate the ship's collider to prevent further collisions
-        Collider shipCollider = GetComponent<Collider>();
-        if (shipCollider != null)
-        {
-            shipCollider.enabled = false; // Disable the collider
-        }
+        
 
         // Detach the main camera from the ship and deactivate it
         if (mainCamera != null)
@@ -269,6 +264,12 @@ public class ArcadeShipControls: MonoBehaviour
 
     private async Task GameOverScreen(string text)
     {
+        // Deactivate the ship's collider to prevent further collisions
+        Collider shipCollider = GetComponent<Collider>();
+        if (shipCollider != null)
+        {
+            shipCollider.enabled = false; // Disable the collider
+        }
         Destroy(_booster);
         
         // Fade to black
