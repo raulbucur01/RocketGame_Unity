@@ -1,1 +1,3 @@
-This should be a simple rocket game that includes a rocket traversing through a maze to the exit.
+A space ship game with 2 modes:
+- space battle
+- asteroid maze escape
